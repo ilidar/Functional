@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Functional"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Functional snippets"
   s.description  = "Functional snippets and helpers"
   s.homepage     = "https://github.com/ilidar/Functional"
