@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E9445908B981E835048E9C1 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9445117CB4940A1280A764 /* Functional.h */; };
-		453C3A961AFABE700025F59F /* NSArray+Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 453C3A941AFABE700025F59F /* NSArray+Functional.h */; };
+		2E9445908B981E835048E9C1 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9445117CB4940A1280A764 /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		453C3A961AFABE700025F59F /* NSArray+Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 453C3A941AFABE700025F59F /* NSArray+Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		453C3A971AFABE700025F59F /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 453C3A951AFABE700025F59F /* NSArray+Functional.m */; };
 /* End PBXBuildFile section */
 
