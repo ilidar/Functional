@@ -15,6 +15,7 @@
 - (NSArray *)sort:(NSComparisonResult (^)(id, id))block;
 - (NSArray *)unique;
 - (NSArray *)flatten;
+- (NSDictionary *)splitBy:(id <NSCopying> (^)(id))block;
 - (void)each:(void (^)(id))block;
 
 @end

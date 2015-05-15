@@ -52,6 +52,20 @@
   return result;
 }
 
+- (NSDictionary *)splitBy:(id <NSCopying> (^)(id))block {
+  NSMutableDictionary *result = [NSMutableDictionary new];
+  for (id object in self) {
+    id <NSCopying> key = block(object);
+    NSMutableSet *mutableSet = result[key];
+    if (!mutableSet) {
+      mutableSet = [NSMutableSet new];
+    }
+    [mutableSet addObject:object];
+    result[key] = mutableSet;
+  }
+  return result;
+}
+
 - (void)each:(void (^)(id))block {
   NSParameterAssert(block != nil);
 
