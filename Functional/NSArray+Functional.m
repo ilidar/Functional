@@ -74,4 +74,15 @@
   }
 }
 
+- (BOOL)any:(BOOL(^)(id))block {
+  NSParameterAssert(block != nil);
+
+  for (id object in self) {
+    if (block(object)) {
+      return YES;
+    }
+  }
+  return NO;
+}
+
 @end
