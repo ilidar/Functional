@@ -47,6 +47,10 @@
   return result;
 }
 
+- (NSArray *)merge:(NSArray *)array {
+  return [[self arrayByAddingObjectsFromArray:array] unique];
+}
+
 - (NSDictionary *)splitBy:(id <NSCopying> (^)(id))block {
   NSMutableDictionary *result = [NSMutableDictionary new];
   for (id object in self) {
