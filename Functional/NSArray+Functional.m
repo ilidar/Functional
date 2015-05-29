@@ -16,7 +16,6 @@
   for (id object in self) {
     [result addObject:block(object) ?: [NSNull null]];
   }
-
   return result;
 }
 
@@ -28,7 +27,6 @@
       [result addObject:object];
     }
   }
-
   return result;
 }
 
