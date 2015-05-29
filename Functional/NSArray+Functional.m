@@ -12,7 +12,6 @@
 
 - (NSArray *)map:(id (^)(id))block {
   NSParameterAssert(block != nil);
-
   NSMutableArray *result = [NSMutableArray new];
   for (id object in self) {
     [result addObject:block(object) ?: [NSNull null]];
@@ -23,7 +22,6 @@
 
 - (NSArray *)filter:(BOOL (^)(id))block {
   NSParameterAssert(block != nil);
-
   NSMutableArray *result = [NSMutableArray new];
   for (id object in self) {
     if (block(object)) {
@@ -36,7 +34,6 @@
 
 - (NSArray *)sort:(NSComparisonResult (^)(id, id))block {
   NSParameterAssert(block != nil);
-
   return [self sortedArrayUsingComparator:block];
 }
 
@@ -68,7 +65,6 @@
 
 - (void)each:(void (^)(id))block {
   NSParameterAssert(block != nil);
-
   for (id object in self) {
     block(object);
   }
@@ -76,7 +72,6 @@
 
 - (BOOL)any:(BOOL(^)(id))block {
   NSParameterAssert(block != nil);
-
   for (id object in self) {
     if (block(object)) {
       return YES;
