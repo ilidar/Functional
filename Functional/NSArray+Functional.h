@@ -19,5 +19,6 @@
 - (NSDictionary *)splitBy:(id <NSCopying> (^)(id))block;
 - (void)each:(void (^)(id))block;
 - (BOOL)any:(BOOL(^)(id))block;
+- (id)first:(BOOL(^)(id))block;
 
 @end

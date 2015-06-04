@@ -82,4 +82,14 @@
   return NO;
 }
 
+- (id)first:(BOOL(^)(id))block {
+  NSParameterAssert(block != nil);
+  for (id object in self) {
+    if (block(object)) {
+      return object;
+    }
+  }
+  return nil;
+}
+
 @end
