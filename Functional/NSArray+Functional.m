@@ -10,86 +10,39 @@
 
 @implementation NSArray (Functional)
 
-- (NSArray *)map:(id (^)(id))block {
-  NSParameterAssert(block != nil);
-  NSMutableArray *result = [NSMutableArray new];
-  for (id object in self) {
-    [result addObject:block(object) ?: [NSNull null]];
+- (id)reduce:(id(^)(id, id))f from:(id)from {
+  NSParameterAssert(f != nil && from != nil);
+  id result = from;
+  for (id x in self) {
+    result = f(result, x);
   }
   return result;
 }
 
-- (NSArray *)filter:(BOOL (^)(id))block {
-  NSParameterAssert(block != nil);
-  NSMutableArray *result = [NSMutableArray new];
-  for (id object in self) {
-    if (block(object)) {
-      [result addObject:object];
+- (NSArray *)map:(id (^)(id))f {
+  NSParameterAssert(f != nil);
+  return [self
+    reduce:^id(NSArray *xs, id x) {
+      return [xs arrayByAddingObject:f(x)];
     }
-  }
-  return result;
+    from:[NSArray new]];
 }
 
-- (NSArray *)sort:(NSComparisonResult (^)(id, id))block {
-  NSParameterAssert(block != nil);
-  return [self sortedArrayUsingComparator:block];
-}
-
-- (NSArray *)unique {
-  return [[NSSet setWithArray:self] allObjects];
+- (NSArray *)filter:(BOOL (^)(id))f {
+  NSParameterAssert(f != nil);
+  return [self
+    reduce:^id(NSArray *xs, id x) {
+      return f(x) ? [xs arrayByAddingObject:x] : xs;
+    }
+    from:[NSArray new]];
 }
 
 - (NSArray *)flatten {
-  NSMutableArray *result = [NSMutableArray new];
-  [self each:^(NSArray *array) {
-    [result addObjectsFromArray:array];
-  }];
-  return result;
-}
-
-- (NSArray *)merge:(NSArray *)array {
-  return [[self arrayByAddingObjectsFromArray:array] unique];
-}
-
-- (NSDictionary *)splitBy:(id <NSCopying> (^)(id))block {
-  NSMutableDictionary *result = [NSMutableDictionary new];
-  for (id object in self) {
-    id <NSCopying> key = block(object);
-    NSMutableSet *mutableSet = result[key];
-    if (!mutableSet) {
-      mutableSet = [NSMutableSet new];
+  return [self
+    reduce:^id(NSArray *xss, NSArray *xs) {
+      return [xss arrayByAddingObjectsFromArray:xs];
     }
-    [mutableSet addObject:object];
-    result[key] = mutableSet;
-  }
-  return result;
-}
-
-- (void)each:(void (^)(id))block {
-  NSParameterAssert(block != nil);
-  for (id object in self) {
-    block(object);
-  }
-}
-
-- (BOOL)any:(BOOL(^)(id))block {
-  NSParameterAssert(block != nil);
-  for (id object in self) {
-    if (block(object)) {
-      return YES;
-    }
-  }
-  return NO;
-}
-
-- (id)first:(BOOL(^)(id))block {
-  NSParameterAssert(block != nil);
-  for (id object in self) {
-    if (block(object)) {
-      return object;
-    }
-  }
-  return nil;
+    from:[NSArray new]];
 }
 
 @end

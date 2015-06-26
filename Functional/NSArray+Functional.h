@@ -10,15 +10,9 @@
 
 @interface NSArray (Functional)
 
-- (NSArray *)map:(id (^)(id))block;
-- (NSArray *)filter:(BOOL (^)(id))block;
-- (NSArray *)sort:(NSComparisonResult (^)(id, id))block;
-- (NSArray *)unique;
+- (id)reduce:(id(^)(id, id))f from:(id)from;
+- (NSArray *)map:(id (^)(id))f;
+- (NSArray *)filter:(BOOL (^)(id))f;
 - (NSArray *)flatten;
-- (NSArray *)merge:(NSArray *)array;
-- (NSDictionary *)splitBy:(id <NSCopying> (^)(id))block;
-- (void)each:(void (^)(id))block;
-- (BOOL)any:(BOOL(^)(id))block;
-- (id)first:(BOOL(^)(id))block;
 
 @end
