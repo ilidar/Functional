@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		2E9445908B981E835048E9C1 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9445117CB4940A1280A764 /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E9449D40A2EDE2F3103139C /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9444B5D875EC68251299E7 /* NSArray+Additions.m */; };
-		2E944E3E4F86FC10914C16E5 /* NSArray+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E944534E479F7A63285E01A /* NSArray+Additions.h */; };
+		2E944E3E4F86FC10914C16E5 /* NSArray+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E944534E479F7A63285E01A /* NSArray+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		453C3A961AFABE700025F59F /* NSArray+Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 453C3A941AFABE700025F59F /* NSArray+Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		453C3A971AFABE700025F59F /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 453C3A951AFABE700025F59F /* NSArray+Functional.m */; };
 		45F8F1711B3DD5D600DB233E /* Functional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E94464B919ECE536BABA562 /* Functional.framework */; };
-		45F8F1781B3DD69400DB233E /* NSArray+FunctionalSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F8F1771B3DD69400DB233E /* NSArray+FunctionalSpec.m */; };
+		45F8F1781B3DD69400DB233E /* NSArrayFunctionalSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F8F1771B3DD69400DB233E /* NSArrayFunctionalSpec.m */; };
 		994DD4252188ACF5FF048748 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BCC9589A5C920A60A9C5A0 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		453C3A951AFABE700025F59F /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
 		45F8F16B1B3DD5D600DB233E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F8F16E1B3DD5D600DB233E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45F8F1771B3DD69400DB233E /* NSArray+FunctionalSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FunctionalSpec.m"; sourceTree = "<group>"; };
+		45F8F1771B3DD69400DB233E /* NSArrayFunctionalSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFunctionalSpec.m; sourceTree = "<group>"; };
 		51CD5B84FE9DECDE6374E2B7 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E02824FB7F4E7A3D13A35DB /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		81BCC9589A5C920A60A9C5A0 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				45F8F16D1B3DD5D600DB233E /* Supporting Files */,
-				45F8F1771B3DD69400DB233E /* NSArray+FunctionalSpec.m */,
+				45F8F1771B3DD69400DB233E /* NSArrayFunctionalSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E944E3E4F86FC10914C16E5 /* NSArray+Additions.h in Headers */,
 				453C3A961AFABE700025F59F /* NSArray+Functional.h in Headers */,
 				2E9445908B981E835048E9C1 /* Functional.h in Headers */,
-				2E944E3E4F86FC10914C16E5 /* NSArray+Additions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F8F1781B3DD69400DB233E /* NSArray+FunctionalSpec.m in Sources */,
+				45F8F1781B3DD69400DB233E /* NSArrayFunctionalSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

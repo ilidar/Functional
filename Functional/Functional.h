@@ -13,5 +13,6 @@ FOUNDATION_EXPORT double FunctionalVersionNumber;
 FOUNDATION_EXPORT const unsigned char FunctionalVersionString[];
 
 #ifdef __OBJC__
-  #import "NSArray+Functional.h"
+  #import <Functional/NSArray+Functional.h>
+  #import <Functional/NSArray+Additions.h>
 #endif

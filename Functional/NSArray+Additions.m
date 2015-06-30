@@ -6,7 +6,7 @@
 // Copyright (c) 2015 D. K. All rights reserved.
 //
 
-#import "NSArray+Additions.h"
+#import <Functional/Functional.h>
 
 @implementation NSArray (Additions)
 
