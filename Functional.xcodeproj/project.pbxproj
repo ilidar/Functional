@@ -12,9 +12,11 @@
 		2E944E3E4F86FC10914C16E5 /* NSArray+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E944534E479F7A63285E01A /* NSArray+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		453C3A961AFABE700025F59F /* NSArray+Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 453C3A941AFABE700025F59F /* NSArray+Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		453C3A971AFABE700025F59F /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 453C3A951AFABE700025F59F /* NSArray+Functional.m */; };
+		45BADE691C14E87300902AFB /* Kiwi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E1B1FD1C1490A50038F6AD /* Kiwi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45BADE6A1C14E8B700902AFB /* Functional.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E94464B919ECE536BABA562 /* Functional.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45E1B1FE1C1490A50038F6AD /* Kiwi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1B1FD1C1490A50038F6AD /* Kiwi.framework */; };
 		45F8F1711B3DD5D600DB233E /* Functional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E94464B919ECE536BABA562 /* Functional.framework */; };
 		45F8F1781B3DD69400DB233E /* NSArrayFunctionalSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F8F1771B3DD69400DB233E /* NSArrayFunctionalSpec.m */; };
-		994DD4252188ACF5FF048748 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BCC9589A5C920A60A9C5A0 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		45BADE681C14E86400902AFB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45BADE6A1C14E8B700902AFB /* Functional.framework in CopyFiles */,
+				45BADE691C14E87300902AFB /* Kiwi.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2E9444B5D875EC68251299E7 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		2E9445117CB4940A1280A764 /* Functional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Functional.h; sourceTree = "<group>"; };
@@ -35,12 +51,10 @@
 		2E944EC5F4DC60873D1D9252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		453C3A941AFABE700025F59F /* NSArray+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
 		453C3A951AFABE700025F59F /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
-		45F8F16B1B3DD5D600DB233E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E1B1FD1C1490A50038F6AD /* Kiwi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kiwi.framework; path = Carthage/Build/iOS/Kiwi.framework; sourceTree = "<group>"; };
+		45F8F16B1B3DD5D600DB233E /* Functional-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Functional-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F8F16E1B3DD5D600DB233E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45F8F1771B3DD69400DB233E /* NSArrayFunctionalSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFunctionalSpec.m; sourceTree = "<group>"; };
-		51CD5B84FE9DECDE6374E2B7 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E02824FB7F4E7A3D13A35DB /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		81BCC9589A5C920A60A9C5A0 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E1B1FE1C1490A50038F6AD /* Kiwi.framework in Frameworks */,
 				45F8F1711B3DD5D600DB233E /* Functional.framework in Frameworks */,
-				994DD4252188ACF5FF048748 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +80,7 @@
 		0C1BF82F74FCFF448DB8DD7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81BCC9589A5C920A60A9C5A0 /* libPods-Tests.a */,
+				45E1B1FD1C1490A50038F6AD /* Kiwi.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -77,7 +91,6 @@
 				45F8F16C1B3DD5D600DB233E /* Tests */,
 				2E944A7A7AEAEF9A15F9F9D8 /* Products */,
 				2E9449382F89A5B361F811FD /* Functional */,
-				C67C4FCB8BF54E2778E93FEB /* Pods */,
 				0C1BF82F74FCFF448DB8DD7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				2E94464B919ECE536BABA562 /* Functional.framework */,
-				45F8F16B1B3DD5D600DB233E /* Tests.xctest */,
+				45F8F16B1B3DD5D600DB233E /* Functional-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,15 +142,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C67C4FCB8BF54E2778E93FEB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				51CD5B84FE9DECDE6374E2B7 /* Pods-Tests.debug.xcconfig */,
-				5E02824FB7F4E7A3D13A35DB /* Pods-Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -154,9 +158,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2E944F0CA6FEFDBBC12E5252 /* Functional */ = {
+		2E944F0CA6FEFDBBC12E5252 /* Functional-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E94403EF76E396358629A8E /* Build configuration list for PBXNativeTarget "Functional" */;
+			buildConfigurationList = 2E94403EF76E396358629A8E /* Build configuration list for PBXNativeTarget "Functional-iOS" */;
 			buildPhases = (
 				2E944F30B91533F0AE616E4E /* Sources */,
 				2E94485CB55D9A5F9DE92B21 /* Frameworks */,
@@ -167,29 +171,28 @@
 			);
 			dependencies = (
 			);
-			name = Functional;
+			name = "Functional-iOS";
 			productName = Functional;
 			productReference = 2E94464B919ECE536BABA562 /* Functional.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		45F8F16A1B3DD5D600DB233E /* Tests */ = {
+		45F8F16A1B3DD5D600DB233E /* Functional-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45F8F1761B3DD5D600DB233E /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = 45F8F1761B3DD5D600DB233E /* Build configuration list for PBXNativeTarget "Functional-iOSTests" */;
 			buildPhases = (
-				84EB798FFD4CB38918C5753C /* Check Pods Manifest.lock */,
 				45F8F1671B3DD5D600DB233E /* Sources */,
 				45F8F1681B3DD5D600DB233E /* Frameworks */,
 				45F8F1691B3DD5D600DB233E /* Resources */,
-				94F8CCD531551E072EDEBC15 /* Copy Pods Resources */,
+				45BADE681C14E86400902AFB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				45F8F1731B3DD5D600DB233E /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = "Functional-iOSTests";
 			productName = Tests;
-			productReference = 45F8F16B1B3DD5D600DB233E /* Tests.xctest */;
+			productReference = 45F8F16B1B3DD5D600DB233E /* Functional-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -198,6 +201,7 @@
 		2E944137D8CA5479F07D8151 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "D. K.";
 				TargetAttributes = {
 					45F8F16A1B3DD5D600DB233E = {
@@ -217,8 +221,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E944F0CA6FEFDBBC12E5252 /* Functional */,
-				45F8F16A1B3DD5D600DB233E /* Tests */,
+				2E944F0CA6FEFDBBC12E5252 /* Functional-iOS */,
+				45F8F16A1B3DD5D600DB233E /* Functional-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,39 +243,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		84EB798FFD4CB38918C5753C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		94F8CCD531551E072EDEBC15 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E944F30B91533F0AE616E4E /* Sources */ = {
@@ -296,7 +267,7 @@
 /* Begin PBXTargetDependency section */
 		45F8F1731B3DD5D600DB233E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2E944F0CA6FEFDBBC12E5252 /* Functional */;
+			target = 2E944F0CA6FEFDBBC12E5252 /* Functional-iOS */;
 			targetProxy = 45F8F1721B3DD5D600DB233E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -333,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,6 +336,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -380,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -399,8 +371,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Functional/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.functional.id.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -414,19 +388,20 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Functional/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.functional.id.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		45F8F1741B3DD5D600DB233E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51CD5B84FE9DECDE6374E2B7 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -434,20 +409,21 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.functionalkit.id.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		45F8F1751B3DD5D600DB233E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E02824FB7F4E7A3D13A35DB /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.functionalkit.id.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -455,7 +431,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E94403EF76E396358629A8E /* Build configuration list for PBXNativeTarget "Functional" */ = {
+		2E94403EF76E396358629A8E /* Build configuration list for PBXNativeTarget "Functional-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E944DD316F6CDD6280C14BC /* Debug */,
@@ -473,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45F8F1761B3DD5D600DB233E /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		45F8F1761B3DD5D600DB233E /* Build configuration list for PBXNativeTarget "Functional-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45F8F1741B3DD5D600DB233E /* Debug */,
